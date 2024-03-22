@@ -1,0 +1,75 @@
+{
+  "name": "sitdoloribus",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src --ignore *.spec.js --out-dir build && babel-node scripts/copy-files.js && cd build",
+    "clean": "rimraf build",
+    "docs": "jsdoc2md --configure docs/conf.json --files \"src/**/*.js\" -t docs/README.hbs.md -d 2 --partial \"./docs/partials/**/*.hbs\" --separators  -l JavaScript > README.md",
+    "lint": "eslint src test/integration && echo \"eslint: no lint errors\"",
+    "test": "cross-env NODE_ENV=test babel-node test/index.js",
+    "test:coverage": "cross-env NODE_ENV=test babel-node ./node_modules/istanbul/lib/cli.js cover test/index.js",
+    "test:watch": "cross-env NODE_ENV=test babel-node test/watch.js"
+  },
+  "author": "KaileeArmstrong",
+  "keywords": [
+    "jss",
+    "et",
+    "voluptatum",
+    "esse",
+    "vel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlancheLuettgen/sitdoloribus.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlancheLuettgen/sitdoloribus.git/issues"
+  },
+  "peerDependencies": {
+    "jss": "^5.4.0"
+  },
+  "devDependencies": {
+    "app-module-path": "^1.1.0",
+    "babel-cli": "^6.7.7",
+    "babel-eslint": "^6.0.3",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-runtime": "^6.9.2",
+    "benchmark": "^2.1.1",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "cross-env": "^1.0.7",
+    "enzyme": "^2.4.1",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-mocha": "^4.1.0",
+    "eslint-plugin-react": "^6.0.0",
+    "fs-extra": "^0.30.0",
+    "glob": "^7.0.3",
+    "istanbul": "^1.0.0-alpha.2",
+    "jsdoc-export-default-interop": "^0.3.1",
+    "jsdoc-to-markdown": "^2.0.0-alpha.13",
+    "jsdom": "^9.4.2",
+    "jss": "^5.4.0",
+    "jss-preset-default": "^0.2.0",
+    "minimist": "^1.2.0",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.2",
+    "react": "^15.3.1",
+    "react-addons-test-utils": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "rimraf": "^2.5.2",
+    "semver": "^5.1.0",
+    "sinon": "^1.17.4",
+    "webpack": "^2.1.0-beta.13"
+  },
+  "dependencies": {},
+  "homepage": "https://github.com/BlancheLuettgen/sitdoloribus.git"
+}
